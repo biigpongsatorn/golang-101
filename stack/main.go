@@ -47,7 +47,6 @@ func (s *stack) pop() error {
 		_, a = a[len(a)-1], a[:len(a)-1]
 		*s = a
 		return nil
-	} else {
-		return errors.New("error na ja")
 	}
+	return errors.New("error na ja")
 }
