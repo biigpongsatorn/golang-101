@@ -44,7 +44,7 @@ func (s *stack) push(a int) {
 func (s *stack) pop() error {
 	if len(*s) > 0 {
 		a := *s
-		_, a = a[len(a)-1], a[:len(a)-1]
+		a = a[:len(a)-1]
 		*s = a
 		return nil
 	}
